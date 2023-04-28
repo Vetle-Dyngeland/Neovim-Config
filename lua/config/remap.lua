@@ -5,7 +5,9 @@ local function opts(description)
 end
 
 -- LSP
-map("n", "<leader>f", vim.lsp.buf.format, { desc = "format" })
+map("n", "<leader>f", vim.lsp.buf.format, opts("Format"))
+map("n", "<leader>rm", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], opts("Search and replace"))
+map("v", "<leader>rm", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], opts("Search and replace"))
 
 -- Movement
 map("n", "<A-j>", "<cmd>m .+1<cr>==", opts("Move down"))

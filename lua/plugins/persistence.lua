@@ -1,7 +1,6 @@
 return {
     {
         "folke/persistence.nvim",
-        event = "BufReadPre",
         lazy = false,
         module = "persistence",
         opts = {
@@ -15,10 +14,10 @@ return {
             }
         },
         config = function()
-            vim.keymap.set("n", "<leader>qs", [[<cmd>lua require("persistence").load()<cr>]],
-            { desc = "Restore previous session in current directory" })
-            vim.keymap.set("n", "<leader>ql", [[<cmd>lua require("persistence").load({last = true})<cr>]],
-            { desc = "Restore previous session" })
+            require("persistence").setup()
+            local map = vim.keymap.set
+            map("n", "<leader>qs", [[<cmd>lua require("persistence").load()<cr>]], { desc = "Restore previous session in current directory" })
+            map("n", "<leader>ql", [[<cmd>lua require("persistence").load({last = true})<cr>]], { desc = "Restore previous session" })
         end
     }
 }
