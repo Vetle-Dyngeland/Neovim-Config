@@ -4,7 +4,9 @@ local g = vim.g
 g.loaded_netwr = 1
 g.loaded_netwrPlugin = 1
 
-vim.opt.clipboard = "unnamedplus"
+g.markdown_recommended_style = 0
+
+opt.clipboard = "unnamedplus"
 
 opt.nu = true
 opt.relativenumber = true
@@ -40,5 +42,3 @@ if vim.fn.has("nvim-0.9.0") == 1 then
     opt.splitkeep = "screen"
     opt.shortmess:append({ C = true })
 end
-
-g.markdown_recommended_style = 0
