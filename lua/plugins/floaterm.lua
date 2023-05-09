@@ -19,7 +19,6 @@ return {
                 local input = vim.fn.input("New floaterm arguments > ")
                 vim.cmd([[FloatermUpdate]] .. input)
             end, { desc = "Update current floaterm with the given arguments" })
-
         end
     }
 }
