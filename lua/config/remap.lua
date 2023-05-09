@@ -51,3 +51,6 @@ map('n', '<A-0>', '<Cmd>BufferLast<CR>', opts("Go to last buffer"))
 
 map('n', '<A-p>', '<Cmd>BufferPin<CR>', opts("Toggle buffer pin"))
 map('n', '<A-c>', '<Cmd>BufferClose!<CR>', opts("Close buffer"))
+
+-- Other
+map("t", "<leader>qq", "<C-\\><C-n>")
