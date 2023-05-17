@@ -13,9 +13,19 @@ return {
             end, { desc = "Open new floaterm with the given arguments" })
 
             map("n", "<leader>tt", "<cmd>FloatermToggle<cr>", { desc = "Toggle floaterm" })
+            map("t", "<leader>tt", "<cmd>FloatermToggle<cr>", { desc = "Toggle floaterm" })
+
             map("n", "<leader>tj", "<cmd>FloatermNext<cr>", { desc = "Goto next floaterm" })
+            map("t", "<leader>tj", "<cmd>FloatermNext<cr>", { desc = "Goto next floaterm" })
+
             map("n", "<leader>tk", "<cmd>FloatermPrev<cr>", { desc = "Goto previous floaterm" })
+            map("t", "<leader>tk", "<cmd>FloatermPrev<cr>", { desc = "Goto previous floaterm" })
+
             map("n", "<leader>tu", function()
+                local input = vim.fn.input("New floaterm arguments > ")
+                vim.cmd([[FloatermUpdate]] .. input)
+            end, { desc = "Update current floaterm with the given arguments" })
+            map("t", "<leader>tu", function()
                 local input = vim.fn.input("New floaterm arguments > ")
                 vim.cmd([[FloatermUpdate]] .. input)
             end, { desc = "Update current floaterm with the given arguments" })

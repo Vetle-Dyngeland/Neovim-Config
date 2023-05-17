@@ -3,7 +3,9 @@ return {
 		"glepnir/dashboard-nvim",
 		event = "VimEnter",
 		config = function()
-			require("dashboard").setup({
+            local dashboard = require("dashboard")
+
+			dashboard.setup({
 				theme = "doom",
 				config = {
 					header = {
