@@ -28,6 +28,7 @@ return {
 
             lsp.ensure_installed({
                 "rust_analyzer",
+                "lua_ls"
             })
 
             lsp.configure("lua_ls", {
@@ -77,8 +78,6 @@ return {
                 mapping = cmp_mappings,
             })
 
-            cmp.setup({completion = { completeopt = "menu,menuone,noinsert" }})
-
             lsp.set_preferences({
                 suggest_lsp_servers = true,
                 sign_icons = {
@@ -88,6 +87,8 @@ return {
                     infor_sign = " "
                 }
             })
+
+            cmp.setup({completion = { completeopt = "menu,menuone,noinsert" }})
 
             lsp.on_attach(function(_, bufnr)
                 local function opts(description)
