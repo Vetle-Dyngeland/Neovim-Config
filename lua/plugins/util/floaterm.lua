@@ -2,9 +2,10 @@ return {
     {
         "voldikss/vim-floaterm",
         config = function()
+            local default_options = "--width=0.3 --height=0.35 --position=topright"
             local map = vim.keymap.set
 
-            map("n", "<leader>tm", "<cmd>FloatermNew --disposable=true <cr>", { desc = "Open a new disposable floaterm" })
+            map("n", "<leader>tm", "<cmd>FloatermNew " .. default_options .."<cr>", { desc = "Open a new floaterm with default options" })
             map("n", "<leader>tn", "<cmd>FloatermNew<cr>", { desc = "Open a new floaterm" })
 
             map("n", "<leader>ta", function()
