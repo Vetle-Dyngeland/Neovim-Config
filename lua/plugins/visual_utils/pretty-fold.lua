@@ -2,15 +2,17 @@ return {
     {
         "anuvyklack/pretty-fold.nvim",
         config = function()
-            require("pretty-fold").setup({
-                fill_char = "*",
+            local pretty_fold = require("pretty-fold")
+
+            pretty_fold.setup({
+                keep_indentation = false,
+                fill_char = "━",
                 sections = {
                     left = {
-                        "content"
+                        "━ ", function() return string.rep("*", vim.v.foldlevel) end, " ━┫", "content", " : ", "number_of_folded_lines", " ┣",
                     },
                     right = {
-                        " ", "number_of_folded_lines",
-                        function(config) return config.fill_char:rep(3) end
+                        ""
                     }
                 }
             })
