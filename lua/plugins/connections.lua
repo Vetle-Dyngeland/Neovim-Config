@@ -11,5 +11,6 @@ return {
                 show_time = false
             })
         end
-    }
+    },
+    "wakatime/vim-wakatime"
 }
