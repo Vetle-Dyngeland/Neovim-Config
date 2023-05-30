@@ -16,7 +16,7 @@ return {
                         for _, mod in ipairs({ "move", "select", "swap", "lsp_interop" }) do
                             if opts.textobjects[mod] and opts.textobjects[mod].enable then
                                 enabled = true
-                                break 
+                                break
                             end
                         end
                     end
@@ -28,7 +28,7 @@ return {
         },
         keys = {
             { "<c-space>", desc = "Increment Selection" },
-            { "<bs>", desc = "Decrement selection", mode = "x" }
+            { "<bs>",      desc = "Decrement selection", mode = "x" }
         },
         --- @type TSConfig
         opts = {
@@ -36,7 +36,7 @@ return {
             indent = { enable = true },
             context_commentstring = { enable = true, enable_autocmd = false },
             ensure_installed = {
-                "lua", 
+                "lua",
                 "luadoc",
                 "luap",
                 "rust",
