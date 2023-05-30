@@ -6,7 +6,26 @@ return {
             "nvim-tree/nvim-web-devicons",
         },
         config = function()
-            require("nvim-tree").setup()
+            local nvim_tree = require("nvim-tree")
+
+            nvim_tree.setup({
+                reload_on_bufenter = true,
+                respect_buf_cwd = true,
+                renderer = {
+                    indent_markers = {
+                        enable = true,
+                    }
+                },
+                diagnostics = {
+                    enable = true,
+                    severity = {
+                        min = vim.diagnostic.severity.WARN
+                    }
+                },
+                git = {
+                    timeout = 4000
+                }
+            })
 
             local map = vim.keymap.set
 
