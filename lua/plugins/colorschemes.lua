@@ -24,5 +24,22 @@ return {
                 dim_inactive = true,
             })
         end
+    },
+    {
+        "navarasu/onedark.nvim",
+        config = function()
+            local onedark = require("onedark")
+
+            onedark.setup({
+                toggle_style_key = "<leader>odt",
+                code_style = {
+                    comments = "none";
+                },
+                diagnostics = {
+                    darker = false,
+                    undercurl = false,
+                }
+            })
+        end
     }
 }
