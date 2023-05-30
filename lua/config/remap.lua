@@ -1,7 +1,7 @@
 local map = vim.keymap.set
 
 local function opts(description)
-    return { silent = true, noremap = true, desc = str }
+    return { silent = true, noremap = true, desc = description }
 end
 
 -- LSP
