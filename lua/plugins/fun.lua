@@ -15,5 +15,6 @@ return {
 
             map("n", "<leader>fms", "<cmd>Nvimesweeper<cr>", { desc = "Play nvimesweeper" })
         end
-    }
+    },
+    "ThePrimeagen/vim-be-good",
 }
