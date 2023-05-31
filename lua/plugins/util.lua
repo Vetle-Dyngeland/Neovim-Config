@@ -25,14 +25,7 @@ local function format_args(inputstr)
 end
 
 return {
-    {
-        "dstein64/vim-startuptime",
-        cmd = "StartupTime",
-        config = function()
-            vim.g.startuptime_tries = 10
-        end,
-    },
-    {
+   {
         "voldikss/vim-floaterm",
         config = function()
             local default_options = "--width=0.3 --height=0.35 --position=topright"
