@@ -9,12 +9,17 @@ return {
             local nvim_tree = require("nvim-tree")
 
             nvim_tree.setup({
+                sync_root_with_cwd = true,
                 reload_on_bufenter = true,
                 respect_buf_cwd = true,
                 renderer = {
                     indent_markers = {
                         enable = true,
                     }
+                },
+                update_focused_file = {
+                    enable = true,
+                    update_root = true
                 },
                 diagnostics = {
                     enable = true,
@@ -23,7 +28,7 @@ return {
                     }
                 },
                 git = {
-                    timeout = 4000
+                    timeout = 5000
                 }
             })
 
