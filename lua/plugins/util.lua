@@ -25,7 +25,7 @@ local function format_args(inputstr)
 end
 
 return {
-   {
+    {
         "voldikss/vim-floaterm",
         config = function()
             local default_options = "--width=0.3 --height=0.35 --position=topright"
