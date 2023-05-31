@@ -20,12 +20,6 @@ return {
         end
     },
     {
-        "ray-x/lsp_signature.nvim",
-        config = function()
-            require("lsp_signature").setup()
-        end
-    },
-    {
         "folke/which-key.nvim",
         config = function()
             vim.o.timeout = true

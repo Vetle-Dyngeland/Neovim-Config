@@ -26,6 +26,12 @@ end
 
 return {
     {
+        "ray-x/lsp_signature.nvim",
+        config = function()
+            require("lsp_signature").setup()
+        end
+    },
+    {
         "voldikss/vim-floaterm",
         config = function()
             local default_options = "--width=0.3 --height=0.35 --position=topright"
