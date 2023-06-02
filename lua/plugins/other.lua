@@ -12,6 +12,8 @@ return {
                 ts.grep_string({ search = vim.fn.input("Grep > ") })
             end, { desc = "Find string" })
             map("n", "<leader>pr", ts.oldfiles, { desc = "Recent Files" })
+            map("n", "<leader>ps", ts.resume, { desc = "Resume previous search" })
+            map("n", "<leader>pc", function() ts.current_buffer_fuzzy_find() end, { desc = "Find string in current buffer" })
         end
     },
     {
@@ -51,5 +53,4 @@ return {
             require("crates").setup()
         end
     }
-
 }
