@@ -3,18 +3,18 @@ return {
     branch = 'v2.x',
     dependencies = {
         { 'neovim/nvim-lspconfig' },
-        {
-            'williamboman/mason.nvim',
-            build = function()
-                pcall(vim.cmd, 'MasonUpdate')
-            end,
-        },
+        { 'williamboman/mason.nvim' },
         { 'williamboman/mason-lspconfig.nvim' },
 
-        { 'hrsh7th/nvim-cmp' },
-        { 'hrsh7th/cmp-nvim-lsp' },
-        { 'L3MON4D3/LuaSnip' },
+        { "hrsh7th/nvim-cmp" },
+        { "hrsh7th/cmp-buffer" },
+        { "hrsh7th/cmp-path" },
+        { "saadparwaiz1/cmp_luasnip" },
+        { "hrsh7th/cmp-nvim-lsp" },
+        { "hrsh7th/cmp-nvim-lua" },
 
+        { 'L3MON4D3/LuaSnip' },
+        { "rafamadriz/friendly-snippets" },
     },
     config = function()
         require("plugins.lsp.config").config()
